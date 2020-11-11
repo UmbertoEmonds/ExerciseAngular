@@ -15,11 +15,13 @@ export class CarouselComponent implements OnInit {
   currentPic = this.pics[0]
 
   constructor() {
-    for (let i = 0; i < this.pics.length; i++){
-      setTimeout(() => {
-        this.currentPic = this.pics[i]
-      }, i * 1000);
-    }
+    let i: number = 0
+    setInterval(() => {
+      console.log(i)
+      if(i >= this.pics.length) i = 0
+      this.currentPic = this.pics[i]
+      i++
+    }, 1000);
   }
 
   ngOnInit(): void {}

@@ -1,0 +1,13 @@
+<p>counter works!</p>
+<button (click) ="increment()">Increment</button>
+<span>{{count}}</span>
+<div *ngIf="count > 10">a fait bcp de clics</div>
+
+<ul>
+    <li 
+    [ngStyle]="{'color' : student.grade < 10 ? 'red' : 'green'}" 
+    *ngFor="let student of students1">
+    {{student.name}}
+        <span *ngIf="student.grade > 14">Bon élève</span>
+    </li>
+</ul>

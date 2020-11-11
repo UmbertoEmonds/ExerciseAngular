@@ -1,0 +1,12 @@
+<h3>Flocking</h3>
+
+<div #flocking>
+    <button (click)="onClick($event)" [className]="(flock_selected) ? 'flock' : 'flock selected'" >No flock</button>
+    <button (click)="onClick($event)" [className]="(flock_selected) ? 'flock selected' : 'flock'">Players</button>
+</div>
+
+<select *ngIf="flock_selected" (change)="onPlayerSelected($event)">
+    <option *ngFor="let player of players" [value]="player">
+        {{player}}
+    </option>
+</select>

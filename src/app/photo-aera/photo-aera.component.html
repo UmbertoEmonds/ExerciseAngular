@@ -1,0 +1,9 @@
+<div id="photoArea">
+    <div id="aera">
+        <h2 id="playerName" >{{player}}</h2>
+        <img [src]= "player == '' ? photo_aera : '../assets/3.jpg'" >
+    </div>
+    <div id="thumbs">
+        <img (click)="onClick($event, i)" *ngFor="let thumb of thumbs; let i=index" src={{thumb}}/>
+    </div>
+</div>

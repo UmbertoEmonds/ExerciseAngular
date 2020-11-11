@@ -1,0 +1,23 @@
+#photoArea img {
+    width: 500px;
+}
+
+#photoArea #thumbs img {
+    width: 75px;
+}
+
+#photoArea, #settingsArea {
+    float: left;
+    padding: 4px;
+}
+
+#aera {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#playerName{
+    position: absolute;
+    margin-top: 130px;
+}
