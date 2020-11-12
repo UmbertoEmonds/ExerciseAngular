@@ -10,7 +10,6 @@ export class FlockComponent implements OnInit {
   flock_selected: boolean = false
   players = ["Umberto", "Quentin", "Tina", "Loris", "Damien", "Emilie", "Lucas"]
   @Output() changeEvent = new EventEmitter<string>()
-  @Output() isFlock = new EventEmitter<boolean>()
 
   constructor() {}
 
@@ -19,10 +18,10 @@ export class FlockComponent implements OnInit {
   onClick(event: any){
     this.flock_selected = !this.flock_selected
 
-    // envoyer la première valeur sélectionnée par défaut
-    if(this.flock_selected){
-      this.changeEvent.emit(this.players[0])
-    } else this.changeEvent.emit("")
+    // retour à vide si on enleve le flock
+    if(!this.flock_selected){
+      this.changeEvent.emit("")
+    }
   }
 
   onPlayerSelected(event: any, flock_selected:boolean){

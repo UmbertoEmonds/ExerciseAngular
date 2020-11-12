@@ -1,0 +1,24 @@
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 10px;
+}
+
+p {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    font-family: Arial;
+    display: inline-block;
+}
+
+input{
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 5px;
+    margin-right: 10px;
+}

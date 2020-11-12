@@ -11,7 +11,7 @@ export class PhotoAeraComponent implements OnInit {
   constructor() {}
 
   thumbs:string[] = ["../assets/1.jpg", "../assets/2.jpg", "../assets/3.jpg", "../assets/4.jpg"]
-  photo_aera:string = this.thumbs[0]
+  @Input() photo_aera:string = this.thumbs[0]
 
   @Input() player: string = ""
 

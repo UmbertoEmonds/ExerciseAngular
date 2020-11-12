@@ -1,0 +1,25 @@
+<h1>Joueurs</h1>
+<!--
+<input (keyup)="onKeyUp($event)" type="text" placeholder="Nom"/>
+
+<button (click)="addPlayer()">Ajouter un joueur</button>
+
+-->
+
+<p *ngFor="let player of players, let i = index">
+
+    <label for="firstname">Prénom</label>
+    <input type="text" id="firstname" value="{{player.firstname}}">
+
+    <label for="lastname">Nom</label>
+    <input type="text" id="lastname" value="{{player.lastname}}">
+
+    <label for="age">Age</label>
+    <input type="number" id="age" value="{{player.age}}">
+
+    <label for="position">Position</label>
+    <input type="text" id="position" value="{{player.position}}">
+
+    <button (click)="editPlayer(player)">Editer</button>
+    <button (click)="deletePlayer(player.id, i)">Supprimer</button>
+</p>

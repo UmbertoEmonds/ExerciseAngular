@@ -6,6 +6,7 @@
 </div>
 
 <select *ngIf="flock_selected" (change)="onPlayerSelected($event)">
+    <option value="">Selectionner un joueur</option>
     <option *ngFor="let player of players" [value]="player">
         {{player}}
     </option>
